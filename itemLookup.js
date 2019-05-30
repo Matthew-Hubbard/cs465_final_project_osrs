@@ -5,6 +5,22 @@ function loadItem(){
     //     console.log("grabbing item id JSON");
     //     console.log(result);
     // });
+    
+
+    //trying to add wave animation...
+    var welcome = "Hello World of Runescape";
+    for (var i in text){
+        if(text[i] == " "){
+            $(".thewave").append( $(<span>).html("&nbsp"));
+        }
+        else{
+            $(".thewave").append( $(<span>).text(text[i]));
+        }
+    }
+
+
+
+
 
     $('#itemResults').html("<p>Looking up... </p>");
     let itemName = $('#itemInput').val();

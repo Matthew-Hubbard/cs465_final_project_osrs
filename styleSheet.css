@@ -5,8 +5,42 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.wave{
+    @include wavey;
+}
+@keyframes wave {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(5px);
+      }
+      50%{
+        transform: translateY(0);
+      }
+      75% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+
+}
+@mixin wave{
+    @for $i from 1 through 50 {
+      .char#{$i}{
+        display: inline-block;
+        animation: wave .66s linear infinite unquote(-$i * 50 + ms);
+      }
+    }
+}
+
+.thewave{
+    @include wave;
+}
 
 .container{
+    font-family:'runescape_chat_bold_07regular';
     color: white;
     text-shadow:2px 2px 4px gold;
     font-size: 25px;

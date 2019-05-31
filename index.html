@@ -29,8 +29,17 @@
                     <input type="text" class="form-control" id="itemInput" value="dragon scimitar">
                 </div>
                 <div class="col-sm-2">
-                    <button type="button" class="btn btn-primary" onclick="loadItem()">Submit</button>
+                    <button type="button" id ="Btn" class="btn btn-primary" onclick="loadItem()">Submit</button>
                 </div>
+                <script>
+                        var item = document.getElementById("itemInput");
+                        item.addEventListener("keypress",function(event){
+                            if(event.keyCode === 13){
+                                event.preventDefault();
+                                document.getElementById("Btn").click();
+                            }
+                        });
+                    </script>
             </div>
         </form>
 

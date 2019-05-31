@@ -35,9 +35,10 @@ body{
     font-size: 50px;
 
     animation-name:wave;
-    animation-duration: 0.3s;
+    animation-duration: 0.66s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-timing-function: linear;
+    
     
 }
 /*

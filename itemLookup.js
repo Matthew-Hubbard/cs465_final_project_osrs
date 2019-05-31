@@ -18,25 +18,16 @@ function loadItem(){
         else{
         str.append(welcomestr[i]+ "</span>");
         }
+        
         $('#welcome').append(str);
         b= b+0.1;
     }
     for (var i =0; i<length; ++i){
-        $("welcome").eq(i).css({'-webkit-animation-delay': '0.1s'})
+        var seconds = -i*50+'s';
+        $("span").eq(i).css({'-webkit-animation-delay':seconds})
+        
     }
-   /* var str = $('<span>');
-    var substr = $('<span>');
-    var length = welcomestr.length;
-    for(var i =0; i<length; ++i){
-        substr.append(welcome[i]);
-        str.append(substr);
-       // substr = "<span>"+welcomestr[i]+"</span>";
-        //str+=substr;
-        //$('welcome').append($('span').html(welcomestr[i]));
-       // b = b+0
-    }
-    $('#welcome').html(str);*/
-
+ 
     
 
     $('#itemResults').html("<p>Looking up... </p>");

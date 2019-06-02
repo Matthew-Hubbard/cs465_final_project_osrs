@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="itemLookup.js"></script>
     <script type="text/javascript" src="characterLookup.js"></script>
+    <script type="text/javascript" src="welcome.js"></script>
 
     <title>Old School Runescape</title>
     <link rel="stylesheet" type="text/css" href="styleSheet.css"> <!-- import the .css -->
@@ -32,7 +33,7 @@
                 <button type="button" id ="Btn" class="btn btn-primary" onclick="loadItem()">Submit</button>
             </div>
             <script>
-                var item = document.getElementById("itemInput");
+                let item = document.getElementById("itemInput");
                 item.addEventListener("keypress",function(event){
                     if(event.keyCode === 13){
                         event.preventDefault();
@@ -62,8 +63,8 @@
                 <button type="button" id ="Btn2" class="btn btn-primary" onclick="loadCharacter()">Submit</button>
             </div>
             <script>
-                var character = document.getElementById("characterInput");
-                item.addEventListener("keypress",function(event){
+                let character = document.getElementById("characterInput");
+                character.addEventListener("keypress",function(event){
                     if(event.keyCode === 13){
                         event.preventDefault();
                         document.getElementById("Btn2").click();

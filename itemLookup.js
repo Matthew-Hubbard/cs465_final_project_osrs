@@ -54,4 +54,3 @@ function loadItem(){
     console.log('outputting to div...');
     console.log(htmlStr);
 }
-

@@ -6,7 +6,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="itemLookup.js"></script>
@@ -16,41 +16,69 @@
     <link rel="stylesheet" type="text/css" href="styleSheet.css"> <!-- import the .css -->
 </head>
 <body>
-    
-    <div class="container">
-        <!--<p>Hello World of Runescape!!</p>-->
-        <div class = "thewave" id = "welcome">
-            <script>Welcome();</script>
+
+<div class="container">
+    <!--<p>Hello World of Runescape!!</p>-->
+    <div class = "thewave" id = "welcome">
+        <script>Welcome();</script>
     </div>
-        <form>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Item Name:</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="itemInput" value="dragon scimitar">
-                </div>
-                <div class="col-sm-2">
-                    <button type="button" id ="Btn" class="btn btn-primary" onclick="loadItem()">Submit</button>
-                </div>
-                <script>
-                        var item = document.getElementById("itemInput");
-                        item.addEventListener("keypress",function(event){
-                            if(event.keyCode === 13){
-                                event.preventDefault();
-                                document.getElementById("Btn").click();
-                            }
-                        });
-
-                        
-                    </script>
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Item Name:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="itemInput" value="dragon scimitar">
             </div>
-        </form>
-
-        <p>Item Stats: </p>
-        <div class="row">
-            <div class="col-lg-8" id="itemResults">
-<!--                <script>loadItem()</script>-->
+            <div class="col-sm-2">
+                <button type="button" id ="Btn" class="btn btn-primary" onclick="loadItem()">Submit</button>
             </div>
+            <script>
+                var item = document.getElementById("itemInput");
+                item.addEventListener("keypress",function(event){
+                    if(event.keyCode === 13){
+                        event.preventDefault();
+                        document.getElementById("Btn").click();
+                    }
+                });
+            </script>
+        </div>
+    </form>
+
+    <p>Item Stats: </p>
+    <div class="row">
+        <div class="col-lg-8" id="itemResults">
+            <!--                <script>loadItem()</script>-->
         </div>
     </div>
+
+    <hr>
+
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Username:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="characterInput" value="IArctic FoxI">
+            </div>
+            <div class="col-sm-2">
+                <button type="button" id ="Btn2" class="btn btn-primary" onclick="loadCharacter()">Submit</button>
+            </div>
+            <script>
+                var character = document.getElementById("characterInput");
+                item.addEventListener("keypress",function(event){
+                    if(event.keyCode === 13){
+                        event.preventDefault();
+                        document.getElementById("Btn2").click();
+                    }
+                });
+            </script>
+        </div>
+    </form>
+
+    <p>Character Stats: </p>
+    <div class="row">
+        <div class="col-lg-8" id="characterResults">
+            <!--                <script>loadItem()</script>-->
+        </div>
+    </div>
+</div>
 </body>
 </html>

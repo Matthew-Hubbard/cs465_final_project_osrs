@@ -16,8 +16,12 @@
     <link rel="stylesheet" type="text/css" href="styleSheet.css"> <!-- import the .css -->
 </head>
 <body>
+    
     <div class="container">
-        <p>Hello World of Runescape!!</p>
+        <!--<p>Hello World of Runescape!!</p>-->
+        <div class = "thewave" id = "welcome">
+            <script>Welcome();</script>
+    </div>
         <form>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Item Name:</label>
@@ -25,8 +29,19 @@
                     <input type="text" class="form-control" id="itemInput" value="dragon scimitar">
                 </div>
                 <div class="col-sm-2">
-                    <button type="button" class="btn btn-primary" onclick="loadItem()">Submit</button>
+                    <button type="button" id ="Btn" class="btn btn-primary" onclick="loadItem()">Submit</button>
                 </div>
+                <script>
+                        var item = document.getElementById("itemInput");
+                        item.addEventListener("keypress",function(event){
+                            if(event.keyCode === 13){
+                                event.preventDefault();
+                                document.getElementById("Btn").click();
+                            }
+                        });
+
+                        
+                    </script>
             </div>
         </form>
 

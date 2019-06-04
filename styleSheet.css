@@ -42,6 +42,18 @@ body{
     
     
 }
+
+/*Character lookup CSS */
+#characterResults{
+  margin: auto;
+  column-count: 4;
+  column-gap: 10px;
+
+}
+
+h1{
+  font-size:20px;
+}
 /*
 .thewave span:nth-child(1){
     -webkit-animation-delay: 0.1s;

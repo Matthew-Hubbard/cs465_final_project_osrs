@@ -6,6 +6,15 @@ body{
     background-attachment: fixed;
 }
 
+@font-face {
+  font-family: 'RuneScape-UF';
+  src: url('RuneScape-UF.svg#RuneScape-UF') format('svg'),
+       url('RuneScape-UF.ttf') format('truetype'),
+       url('RuneScape-UF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @keyframes wave {
     
       0% {
@@ -32,7 +41,8 @@ body{
 }
 .thewave span{
     display:inline-block;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family:'Runescape-UF';
     font-size: 60px;
 
     animation-name:wave;
@@ -54,16 +64,12 @@ body{
 h1{
   font-size:20px;
 }
-/*
-.thewave span:nth-child(1){
-    -webkit-animation-delay: 0.1s;
-}*/
+
 
 
 
 
 .container{
-    font-family:'runescape_chat_bold_07regular';
     color: white;
     text-shadow:2px 2px 4px gold;
     font-size: 30px;

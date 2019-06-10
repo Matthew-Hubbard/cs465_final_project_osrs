@@ -35,7 +35,7 @@ function displayCharacter(result) {
         let skillNames = Object.keys(result['stats']);
         let i = 0;
         for(let key in result['stats']){
-            htmlStr += "<p>" + skillNames[i] + " : " + result['stats'][key]['level'] + "</p>";
+            htmlStr += "<h1>" + skillNames[i] + " : " + result['stats'][key]['level'] + "</h1>";
             ++i;
         }
         $('#characterResults').html(htmlStr);

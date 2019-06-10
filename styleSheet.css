@@ -1,9 +1,25 @@
 body{
+ 
     background-color: black;
     background-image:url("Images/runescape.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
+}
+html{
+  
+    width:100%;
+    height:100%;
+}
+
+@font-face {
+  font-family: 'RuneScape-UF';
+  src: url('RuneScape-UF.svg#RuneScape-UF') format('svg'),
+       url('RuneScape-UF.ttf') format('truetype'),
+       url('RuneScape-UF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @keyframes wave {
@@ -29,10 +45,12 @@ body{
     margin-top: 10px;
     margin-bottom: 100px;
     text-align: center;
+
 }
 .thewave span{
     display:inline-block;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family:'Runescape-UF';
     font-size: 60px;
 
     animation-name:wave;
@@ -42,18 +60,61 @@ body{
     
     
 }
-/*
-.thewave span:nth-child(1){
-    -webkit-animation-delay: 0.1s;
-}*/
 
+/*Character lookup CSS */
+#characterResults{
+  margin: auto;
+  column-count: 4;
+  column-gap: 10px;
 
+}
+
+/*change the font size of the character stats*/
+h1{
+  font-size:20px;
+
+}
+/*setting margin for ItemName and ItemStats*/
+p{
+  margin:auto;
+}
+
+/*Changing the sizes of the input boxes to fit to size of screen*/
+#characterInput{
+  
+  width:75%;
+  height:auto;
+  margin:auto;
+  margin-top:8px;
+
+}
+#itemInput{
+  margin-top:4px;
+  width:75%;
+  height:auto;
+  margin:auto;
+  margin-top:10px;
+}
+
+/*realligning buttons after moving the text boxes.*/
+#Btn{
+  margin:auto;
+  margin-top:10px;
+}
+#Btn2{
+  margin:auto;
+  margin-top:4px;
+}
 
 
 .container{
-    font-family:'runescape_chat_bold_07regular';
+    font-family:'Runescape-UF';
     color: white;
     text-shadow:2px 2px 4px gold;
     font-size: 30px;
+    margin: auto;
+    width:100%;
+    height:100%;
+    
 
 }
